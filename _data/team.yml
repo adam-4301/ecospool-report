@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────────────────────
+#  TEAM — shown on the home page.
+#  photo: put a square photo in assets/images/team/ and write its
+#         path here, e.g. "assets/images/team/adam.jpg".
+#         Leave it as "" to show the initials instead.
+# ─────────────────────────────────────────────────────────────
+
+members:
+  - name: "Adam Ho Tze-An"
+    course: "Materials Science & Engineering"
+    role: ""   # optional extra line under the course, e.g. "Water bath lead"
+    initials: "AH"
+    photo: ""
+
+  - name: "Srinivasan Karthik"
+    course: "Mechanical Engineering"
+    role: ""
+    initials: "SK"
+    photo: ""
+
+supervisors: "Dr. Jovan Tan and James Wang"
+partners: "NUS Sustainability Strategy Unit (SSU) and Semula Asia"

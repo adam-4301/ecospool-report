@@ -1,0 +1,55 @@
+---
+layout: default
+---
+{% if site.report_pdf contains "://" %}{% assign pdf_link = site.report_pdf %}{% else %}{% assign pdf_link = '/' | append: site.report_pdf | relative_url %}{% endif %}
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="pill"><span class="dot" aria-hidden="true"></span>{{ site.module }}</p>
+    <h1 class="hero-title"><span>{{ site.project_code }}</span><span class="hero-title-name">{{ site.title }}</span></h1>
+    <p class="hero-tagline">{{ site.tagline }}</p>
+    <blockquote class="hero-question">{{ page.question }}</blockquote>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/introduction.html' | relative_url }}">Start reading</a>
+      <a class="btn btn-ghost" href="{{ pdf_link }}" target="_blank" rel="noopener">Download the report (PDF)</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="orb">
+      <img src="{{ '/' | append: page.hero_image | relative_url }}" alt="{{ page.hero_image_alt }}">
+    </div>
+    <ul class="team-cards">
+      {% for m in site.data.team.members %}
+      <li class="team-card">
+        {% if m.photo != "" %}
+        <img class="avatar" src="{{ '/' | append: m.photo | relative_url }}" alt="" width="72" height="72">
+        {% else %}
+        <span class="avatar avatar-initials" aria-hidden="true">{{ m.initials }}</span>
+        {% endif %}
+        <div>
+          <p class="team-name">{{ m.name }}</p>
+          <p class="team-meta">{{ m.course }}</p>
+          {% if m.role and m.role != "" %}<p class="team-role">{{ m.role }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="contents" aria-labelledby="contents-title">
+  <h2 id="contents-title">Inside the report</h2>
+  <ol class="contents-list">
+    {% for s in page.contents %}
+    {% assign s_url = '/' | append: s.url %}
+    <li>
+      <a href="{{ s_url | relative_url }}">
+        <span class="contents-num">{{ s.number }}</span>
+        <span class="contents-text"><strong>{{ s.title }}</strong>{{ s.text }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="credits">Supervised by <strong>{{ site.data.team.supervisors }}</strong>. With thanks to {{ site.data.team.partners }}.</p>
+</section>

@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────────────────────
+#  SITE SETTINGS — edit the text on the right of each colon.
+#  Keep the quotes "..." around text that contains a colon (:).
+# ─────────────────────────────────────────────────────────────
+
+title: "EcoSpool"
+project_code: "SSC-402"
+tagline: "Recycling NUS lab plastic waste into 3D-printing filament"
+description: "SSC-402 EcoSpool interim report: direct extrusion of campus PP5 waste into 1.75 mm 3D-printing filament. CDE4301 Innovation & Design Capstone, NUS."
+module: "CDE4301 Innovation & Design Capstone"
+module_code: "CDE4301"
+academic_year: "AY 2026/27"
+report_name: "Interim Report"
+
+# The PDF of the full report.
+#  Easiest: upload your PDF into the "assets" folder, name it report.pdf, and leave this as it is.
+#  Or paste a Google Drive share link here instead (set to "Anyone with the link can view").
+report_pdf: "assets/report.pdf"
+
+# IMPORTANT: this must match your GitHub repository name exactly,
+# with a slash in front. Repo called "ecospool-report" → "/ecospool-report"
+baseurl: "/ecospool-report"
+
+# ── You normally don't need to change anything below this line ──
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  hard_wrap: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "section"
+
+exclude:
+  - README.md
+  - HOW-TO-EDIT.md

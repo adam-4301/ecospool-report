@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<header class="section-head">
+  <p class="pill"><span class="dot" aria-hidden="true"></span>{{ site.module_code }}{% if page.section %}, {{ page.section }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<p class="section-sub">{{ page.subtitle }}</p>{% endif %}
+  <span class="section-rule" aria-hidden="true"></span>
+</header>
+
+<div class="cards prose">
+{% assign chunks = content | split: '<h2' %}
+{% for chunk in chunks %}
+  {% if forloop.first %}
+    {% assign intro = chunk | strip %}
+    {% if intro != "" %}<section class="card card-intro">{{ chunk }}</section>{% endif %}
+  {% else %}
+    <section class="card">{{ '<h2' | append: chunk }}</section>
+  {% endif %}
+{% endfor %}
+</div>
+
+{% if page.next_url %}
+{% assign next_link = '/' | append: page.next_url %}
+<nav class="pager" aria-label="Next section">
+  <a href="{{ next_link | relative_url }}"><span>Next</span>{{ page.next_title }}</a>
+</nav>
+{% endif %}

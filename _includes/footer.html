@@ -1,0 +1,7 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-title">{{ site.project_code }} {{ site.title }}</p>
+    <p>{{ site.module }}, {{ site.academic_year }}<br>College of Design and Engineering, National University of Singapore</p>
+    <p>{% for m in site.data.team.members %}{{ m.name }}{% unless forloop.last %} and {% endunless %}{% endfor %}<br>Supervised by {{ site.data.team.supervisors }}</p>
+  </div>
+</footer>
