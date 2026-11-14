@@ -85,44 +85,13 @@ The lateral snaking observed motivates testing a cooling method that surrounds t
 | Specific heat capacity (kJ/kg·K) | 1.007 | 4.180 | 4.179 | 4.181 | 4.185 |
 | Volumetric heat capacity (kJ/m³·K) | 1.18 | 4165 | 4147 | 4131 | 4115 |
 
-The inherited study treated Bi < 1 as sufficient to avoid ovaling from internal cooling gradients [8]. The usual lumped-temperature criterion is Bi ≲ 0.1 [55]. A radial model including crystallisation estimates 8–20 s to cool the strand centre to 60 °C in 28 °C water for illustrative convection coefficients of 100–500 W/(m²·K). A fully wetted 40 cm path provides 18 s. At 173 g/h, cooling from 170 to 28 °C including crystallisation gives about 18 W, enough to warm 20 L of still water by about 0.8 °C/h (Appendix G).
+A radial model including crystallisation estimates 8–20 s to cool the strand centre to 60 °C in 28 °C water for illustrative convection coefficients of 100–500 W/(m²·K). A fully wetted 40 cm path provides 18 s.
 
-### 3.4.2 Single-Zone Proof-of-Concept Bath {#s3-4-2}
+Before fabricating the proposed prototype, the team will compare a 40 cm room-temperature still-water trough with the aligned air tunnel in three matched pairs. Screening results will inform the setup of the recirculating single-zone prototype.
 
-![](assets/images/fig-3-02-single-zone-bath.png)
+<span id="s3-4-4"></span>
 
-*Figure 3.02: CAD Model of Single-zone 40cm-long water bath with key parts and filament travel direction labelled. Relevant water bath data and estimated budget can be found in Appendices G and H*
-{: .caption}
-
-A 40 cm room-temperature trough will be tested against aligned air cooling while holding feedstock, feeding, die, barrel settings, screw speed, die-to-cooling gap and pull speed constant. Water temperature, strand speed, straightness, diameter and ovality will be recorded. If the diameter spread and ovality hold or improve, construction of a triple-zone water bath can begin.
-
-### 3.4.3 Conditional Triple-Zone Water Bath {#s3-4-3}
-
-![](assets/images/fig-3-03-triple-zone-bath.png)
-
-*Figure 3.03: CAD Model of Triple-zone 1.20m-long water bath with key parts and filament travel direction labelled. Relevant water bath data and estimated budget can be found in Appendices G and H*
-{: .caption}
-
-The 3-stage bath will progressively cool the filament from a warm inlet near the die to a room-temperature outlet near the puller. Polypropylene contracts as it cools and crystallises [30] and rapid surface solidification can create a rigid skin around a hot core, and subsequent core contraction can produce internal shrinkage voids [31]. A warmer first zone reduces initial temperature differences between filament surface and the water, moderating initial cooling [32].
-
-The proposed trial ranges are 50 - 60 °C in Zone 1 and 35 - 40 °C in Zone 2. These settings are informed by warm-inlet guidance for rod extrusion and separate recycled-PP filament trials at 40 and 50 °C [32, 33]. PID-controlled heaters will regulate the first two zones. The third will operate near room temperature.
-
-*Table 3.04: Proposed temperatures, lengths and circulation arrangements for the three-zone bath.*
-{: .caption}
-
-| Zone | Proposed water temperature (°C) | Bath length (cm) | Water circulation arrangement |
-|---|---|---|---|
-| Nearest to die | 50–60 | 40 | Heater, sump and return pump |
-| Middle bath | 35–40 | 40 | Heater in static water |
-| Nearest to spooler | 28 (room temp.) | 40 | Sump and return pump |
-
-The proposed 1.20m bath uses 3 40cm modules. This matches the module length of the single-zone prototype and gives each zone a nominal residence time of 18.0s per bath at 1.33 m/min when the filament is fully submerged.
-
-The two outer zones will each use a removable V-notch, sump and return pump. The filament will pass through aligned holes in the acrylic dividers. A latex membrane at each divider will limit water exchange around the strand. Trials will check temperature stability, leakage and filament drag at the pass-throughs.
-
-### 3.4.4 Cooling Concept Selection {#s3-4-4}
-
-*Table 3.05: Preliminary scoring for the first cooling trial*
+*Table 3.04: Preliminary scoring to determine method of preliminary cooling trial*
 {: .caption}
 
 | Cooling concept | Low cost | Fast setup | Low strand disturbance | Temperature control | Total / 12 |
@@ -132,4 +101,33 @@ The two outer zones will each use a removable V-notch, sump and return pump. The
 | Recirculating single zone | 2 | 2 | 3 | 2 | 9 |
 | Heated three-zone bath | 1 | 1 | 3 | 3 | 8 |
 
-Before fabricating the recirculating prototype, the team will compare a 40 cm room-temperature still-water trough with the aligned air tunnel in three matched pairs. Water cooling will advance if median lateral offset decreases by at least 15% and diameter consistency and ovality are maintained or improved across trials.
+### 3.4.2 Single-Zone Proof-of-Concept Bath {#s3-4-2}
+
+![](assets/images/fig-3-02-single-zone-bath.png)
+
+*Figure 3.02: CAD Model of Single-zone 40cm-long water bath with key parts and filament travel direction labelled. Relevant water bath data and estimated budget can be found in Appendices G and H*
+{: .caption}
+
+A single-zone bath will test whether water cooling improves filament quality on EcoSpool. The bath will be 40 cm long to match the nominal cooling length of the Omni-Flow tunnel. It will use an acrylic tank with interchangeable V-notch plates at both ends which allow different angles to be tested for minimising flow rate while maintaining filament clearance and submergence. Water overflowing from the notches drain into a common sump and return through a submerged diffuser which limits disturbance of extrudate. Water temperature, strand speed, straightness, diameter and ovality will be recorded. The single-zone results will serve as the baseline for evaluating the triple-zone bath.
+
+### 3.4.3 Triple-Zone Water Bath {#s3-4-3}
+
+![](assets/images/fig-3-03-triple-zone-bath.png)
+
+*Figure 3.03: CAD Model of Triple-zone 1.20m-long water bath with key parts and filament travel direction labelled. Relevant water bath data and estimated budget can be found in Appendices G and H*
+{: .caption}
+
+The 3-stage bath will progressively cool the filament from a warm inlet near the die to a room-temperature outlet near the puller. The outer zones use the removable V-notch system, sump and return pump. The filament will pass through aligned holes in the acrylic dividers. A latex membrane at each divider limits water exchange around the strand. Trials will check temperature stability, leakage and filament drag at the pass-throughs. Polypropylene contracts as it cools and crystallises [30] and rapid surface solidification can create a rigid skin around a hot core, and subsequent core contraction can produce internal shrinkage voids [31]. A warmer first zone reduces initial temperature differences between filament surface and the water, moderating initial cooling [32]. 
+
+Proposed trial ranges are 50 - 60 °C in Zone 1 and 35 - 40 °C in Zone 2. These settings are informed by warm-inlet guidance for rod extrusion and separate recycled-PP filament trials at 40 and 50 °C [32, 33]. PID-controlled heaters will regulate the first two zones. The third will operate near room temperature.
+
+*Table 3.05: Proposed temperatures, lengths and circulation arrangements for the three-zone bath.*
+{: .caption}
+
+| Zone | Proposed water temperature (°C) | Bath length (cm) | Water circulation arrangement |
+|---|---|---|---|
+| Nearest to die | 50–60 | 40 | Heater, sump and return pump |
+| Middle bath | 35–40 | 40 | Heater in static water |
+| Nearest to spooler | 28 (room temp.) | 40 | Sump and return pump |
+
+The proposed 1.20m bath uses 3 40cm modules. This matches the module length of the single-zone prototype and gives each zone a nominal residence time of 18.0s per bath at 1.33 m/min when the filament is fully submerged.

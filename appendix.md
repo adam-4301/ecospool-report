@@ -275,6 +275,8 @@ Here, Q is the discharge through the V-notch in m³/s, θ is the angle of the V-
 
 For $$C_d$$, 0.60 is tentatively used as an assumed coefficient for preliminary sizing, to be checked against measured discharge.
 
+During commissioning of the single-zone recirculating prototype, interchangeable V-notch inserts with included angles of 15°, 20°, 25° and 30° will be bench-tested. At the same overflow head, discharge will be measured and clearance at the intended filament height checked. The selected angle must maintain the target water level while providing sufficient clearance to avoid strand contact.
+
 ## Appendix H: Estimated Budget for Water Baths {#appendix-h}
 
 *Table H.01: Estimated Budget for 40cm Single-zone Water Bath*
